@@ -26,3 +26,111 @@ body {
 a {
     text-decoration: none;
 }
+
+
+/*
+=================
+     SideBar
+=================
+*/
+
+.aside {
+    width: 24rem;
+    height: 100vh;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: 0.2s;
+    z-index: 101;
+
+}
+
+.aside--active.aside {
+    right: 0;
+}
+
+.aside-logo__title {
+    font-size: 5.6rem;
+    font-family: "Vazir Bold";
+    text-align: center;
+    padding: 5rem 0 9rem 0;
+}
+
+.aside-logo__link {
+    color: #4880FF;
+}
+
+.aside-content {}
+
+.aside-content__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem 0 0rem;
+}
+
+.aside-content__item {
+    width: 20.5rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Vazir Medium";
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding-right: 2rem;
+    position: relative;
+    transition: 0.2s;
+}
+
+.aside-content__item--active {
+    background-color: #4880FF;
+    color: #fff;
+}
+
+.aside-content__item--active .aside-content__icon path {
+    fill: #fff;
+}
+
+.aside-content__item--active.aside-content__item::before {
+    opacity: 1;
+}
+
+
+
+.aside-content__item::before {
+    content: "";
+    position: absolute;
+    height: 5rem;
+    width: 0.7rem;
+    background-color: #4880FF;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    right: -2.1rem;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    /* transform: scaleY(0); */
+    transform-origin: center;
+}
+
+/* 
+.aside-content__item:hover::before {
+    opacity: 1;
+     transform: scaleY(1); 
+}
+ */
+
+.aside-content__item:hover {
+    background-color: #4880FF;
+    color: #fff;
+}
+
+.aside-content__icon path {
+    transition: 0.2s;
+}
+
+.aside-content__item:hover .aside-content__icon path {
+    fill: #fff;
+}
