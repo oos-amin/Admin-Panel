@@ -1,9 +1,64 @@
 @media (max-width:1400px) {}
 
-@media (max-width:1200px) {}
+@media (max-width:1200px) {
+    .aside {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        right: -24rem;
+
+    }
+
+    .main-wrapper {
+        margin-right: auto;
+    }
+
+    .header {
+        border-bottom-left-radius: 2.4rem;
+        border-bottom-right-radius: 2.4rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 8%);
+    }
+
+    .aside-logo__title {
+        display: none;
+    }
+
+    .search-box {
+        margin: 2.5rem auto 4rem auto;
+        width: 85%;
+    }
+
+    .profile {
+        margin: 2rem auto;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+
+    .see-more {
+        display: flex;
+    }
+
+    .see-more__btn--active {
+        overflow-y: visible;
+        max-height: fit-content;
+    }
+}
+
+@media (max-width:1045px) {}
 
 @media (max-width:992px) {}
+
+
+@media (max-width:831px) {}
 
 @media (max-width:768px) {}
 
 @media (max-width:576px) {}
+
+@media (max-width:488px) {}
