@@ -6,6 +6,8 @@ const sidebar = document.querySelector('.aside');
 const sidebarItems = document.querySelectorAll('.aside-content__item');
 const overlay = document.querySelector('.overlay');
 const body = document.body;
+const seeMoreBtn = document.querySelectorAll('.see-more__btn');
+const tableContainer = document.querySelectorAll('.table-container');
 
 // Hamburger menu
 headerMenu.addEventListener('click', function () {
@@ -57,3 +59,12 @@ function moveElements() {
 
 window.addEventListener('load', moveElements);
 window.addEventListener('resize', moveElements);
+
+
+// Show the rest content of tables
+for (let i = 0; i < seeMoreBtn.length; i++) {
+    seeMoreBtn[i].addEventListener('click', function () {
+        seeMoreBtn[i].classList.add('hidden');
+        tableContainer[i].classList.add('see-more__btn--active')
+    })
+};
